@@ -7,55 +7,64 @@ public class Swipe_Controller : MonoBehaviour
     Vector3 s_ClickInicial;
     Vector3 s_AlSoltarClick;
 
-    float s_LimitMove;
+    public float s_LimitMove = 100f;
 
-    [SerializeField] GameObject s_Cubo;
+    public static Swipe_Controller instance;
 
-    // Start is called before the first frame update
-    void Start()
+    bool s_Salta;
+
+    //declarar delegate y events para los movimientos
+    public delegate void SeMueve(Vector3 diferencia);
+    public event SeMueve OnSeMueve;
+
+    private void Awake()
     {
-
+        if (Swipe_Controller.instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Input.mousePosition);
-
         if (Input.GetMouseButtonDown(0))
         {
             s_ClickInicial = Input.mousePosition;
-            //Debug.Log("Pressed left click");
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             s_AlSoltarClick = Input.mousePosition;
-            Vector3 diferencia = s_AlSoltarClick - s_ClickInicial;
-            //Debug.Log(diferencia);
-            if ((diferencia.x) < 0)
-            {
-                MoveTarget(- s_Cubo.GetComponent<Transform>().right);
-                Debug.Log("Ha movido a la izq");
-            }
-            if (diferencia.x > 0)
-            {
-                MoveTarget(- s_Cubo.GetComponent<Transform>().right);
-                Debug.Log("Ha movido a la derch");
-            }
-            if (diferencia.y < 0)
-            {
-                Debug.Log("Ha movido hacia abajo");
-            }
-            if (diferencia.y > 0)
-            {
-                Debug.Log("Ha movido hacia arriba");
-            }
-        }
-    }
 
-    void MoveTarget(Vector3 direction)
-    {
-        s_Cubo.transform.position += direction;
+            Vector3 diferencia = s_AlSoltarClick - s_ClickInicial;
+
+            if (Mathf.Abs(diferencia.magnitude) > s_LimitMove)
+            {
+                diferencia = diferencia.normalized;
+                diferencia.z = diferencia.y;
+
+                if (Mathf.Abs(diferencia.x) > Mathf.Abs(diferencia.z))
+                {
+                    diferencia.z = 0.0f;
+                }
+                else
+                {
+                    diferencia.x = 0.0f;
+                }
+
+                diferencia.y = 0.0f;
+
+                if (OnSeMueve != null)
+                {
+                    OnSeMueve(diferencia);
+                }
+            }
+
+        }
     }
 }
