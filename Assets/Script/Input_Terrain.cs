@@ -8,6 +8,8 @@ public class Input_Terrain : MonoBehaviour
 
     [SerializeField] GameObject t_SpawnTerrain;
 
+    bool t_SeRecicla = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,14 +26,20 @@ public class Input_Terrain : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Entrando");
             GameObject terreno = t_Stack.ObtenerObjeto();
 
             terreno.transform.position = t_SpawnTerrain.transform.position;
         }
     }
 
-    private void OnBecameVisible()
+    private void OnBecameInvisible()
     {
-        
+        if(!t_SeRecicla)
+        {
+            Terrain_Pool.instance.DevolverObjeto(this.gameObject);
+            t_SeRecicla = true;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 }
