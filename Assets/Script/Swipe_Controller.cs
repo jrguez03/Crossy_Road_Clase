@@ -64,7 +64,6 @@ public class Swipe_Controller : MonoBehaviour
                     OnSeMueve(diferencia);
                 }
             }
-
         }
     }
 }

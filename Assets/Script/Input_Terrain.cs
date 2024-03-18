@@ -1,45 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Input_Terrain : MonoBehaviour
 {
-    Terrain_Pool t_Stack;
+    [SerializeField] GameObject i_TerrainPrefab;
+    public int i_NumTerrain;
+    [SerializeField] GameObject i_TerrainSpawn;
+    [SerializeField] GameObject i_InitialSpawn;
+    [SerializeField] GameObject[] i_InitialTerrain;
 
-    [SerializeField] GameObject t_SpawnTerrain;
-
-    bool t_SeRecicla = false;
-
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        t_Stack = GetComponent<Terrain_Pool>();
+        int i_RandomTerrain = Random.Range(0, i_InitialTerrain.Length);
+        Object_Pool.PreLoad(i_TerrainPrefab, i_NumTerrain);
+        i_InitialTerrain[i_RandomTerrain].transform.position = i_InitialSpawn.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RecycleTerrain(GameObject i_Terrain)
     {
-        
+        // Reciclar el terreno utilizando el ObjectPool
+        Object_Pool.RecycleObject(i_TerrainPrefab, i_Terrain);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void NewLevelZone()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Entrando");
-            GameObject terreno = t_Stack.ObtenerObjeto();
-
-            terreno.transform.position = t_SpawnTerrain.transform.position;
-        }
-    }
-
-    private void OnBecameInvisible()
-    {
-        if(!t_SeRecicla)
-        {
-            Terrain_Pool.instance.DevolverObjeto(this.gameObject);
-            t_SeRecicla = true;
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-        }
+        GameObject t_Terrain = Object_Pool.GetObject(i_TerrainPrefab);
+        t_Terrain.transform.position = i_TerrainSpawn.transform.position;
     }
 }
