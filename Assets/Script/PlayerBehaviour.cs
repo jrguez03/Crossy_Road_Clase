@@ -24,6 +24,20 @@ public class PlayerBehaviour : MonoBehaviour
         r_SwipeController.OnSeMueve += MoveTarget;
     }
 
+    private void Update()
+    {
+        if (Physics.Raycast (transform.position + new Vector3(0, 1f, 0), transform.forward, out RaycastHit hitinfo, 1f))
+        {
+            Debug.Log("Hit Something");
+            Debug.Log(hitinfo.transform.position.normalized.x);
+            Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * hitinfo.distance, Color.red);
+        }
+        else
+        {
+            Debug.Log("Hit Nothing");
+            Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * 1f, Color.green);
+        }
+    }
     public void OnDisable()
     {
         r_SwipeController.OnSeMueve -= MoveTarget;
@@ -35,11 +49,11 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (m_Direction.x > 0)
             {
-                transform.eulerAngles = new Vector3(0, -90f, 0);
+                transform.eulerAngles = new Vector3(0, 90f, 0);
             }
             else if (m_Direction.x < 0)
             {
-                transform.eulerAngles = new Vector3(0, 90f, 0);
+                transform.eulerAngles = new Vector3(0, -90f, 0);
             }
             else if (m_Direction.z > 0)
             {
