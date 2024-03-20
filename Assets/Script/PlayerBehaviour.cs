@@ -4,91 +4,85 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    public Swipe_Controller r_SwipeController;
+    public Swipe_Controller p_SwipeController;
 
-    public float r_Offset = 100f;
-    public float r_Duration = 0.25f;
-    public GameObject r_Player;
+    public float p_Offset = 100f;
+    public float p_Duration = 0.25f;
+    public GameObject p_Player;
 
-    bool p_CanMove = true;
+    public bool p_CanMove = true;
 
-    Vector3 p_PreviousPosition;
+    public static RaycastHit p_LastRay;
 
     public void Awake()
     {
-        r_Player = this.gameObject;
+        p_Player = this.gameObject;
     }
 
     public void Start()
     {
-        r_SwipeController.OnSeMueve += MoveTarget;
+        p_SwipeController.OnSeMueve += MoveTarget;
     }
 
-    private void Update()
-    {
-        if (Physics.Raycast (transform.position + new Vector3(0, 1f, 0), transform.forward, out RaycastHit hitinfo, 1f))
-        {
-            Debug.Log("Hit Something");
-            Debug.Log(hitinfo.transform.position.normalized.x);
-            Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * hitinfo.distance, Color.red);
-        }
-        else
-        {
-            Debug.Log("Hit Nothing");
-            Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * 1f, Color.green);
-        }
-    }
     public void OnDisable()
     {
-        r_SwipeController.OnSeMueve -= MoveTarget;
+        p_SwipeController.OnSeMueve -= MoveTarget;
     }
 
-    void MoveTarget(Vector3 m_Direction)
+    void MoveTarget(Vector3 p_Direction)
     {
-        if (p_CanMove == true)
+        if (p_CanMove)
         {
-            if (m_Direction.x > 0)
+            RaycastHit p_HitInfo;
+
+            if (Physics.Raycast(transform.position + new Vector3(0, 1f, 0), p_Direction, out p_HitInfo, 1f))
             {
-                transform.eulerAngles = new Vector3(0, 90f, 0);
-            }
-            else if (m_Direction.x < 0)
-            {
-                transform.eulerAngles = new Vector3(0, -90f, 0);
-            }
-            else if (m_Direction.z > 0)
-            {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-            }
-            else if (m_Direction.z < 0)
-            {
-                transform.eulerAngles = new Vector3(0, 180f, 0);
+                Debug.Log("Hit Something, Restricting Movement");
+
+                p_LastRay = p_HitInfo;
+
+                if (p_Direction.x != 0)
+                {
+                    p_Direction.x = 0;
+                }
+
+                Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * p_HitInfo.distance, Color.red);
             }
 
-            LeanTween.move(r_Player, r_Player.transform.position + new Vector3(m_Direction.normalized.x, 0, 0) / 2 + Vector3.up / 2, r_Duration / 2).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
+            if (p_Direction != Vector3.zero)
             {
-                LeanTween.move(r_Player, r_Player.transform.position + new Vector3(m_Direction.normalized.x, 0, 0) / 2 - Vector3.up / 2, r_Duration / 2).setEase(LeanTweenType.easeOutQuad);
-            });
+                if (p_Direction.x > 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 90f, 0);
+                }
+                else if (p_Direction.x < 0)
+                {
+                    transform.eulerAngles = new Vector3(0, -90f, 0);
+                }
+                else if (p_Direction.z > 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                }
+                else if (p_Direction.z < 0)
+                {
+                    transform.eulerAngles = new Vector3(0, 180f, 0);
+                }
+
+                LeanTween.move(p_Player, p_Player.transform.position + new Vector3(p_Direction.normalized.x, 0, 0) / 2 + Vector3.up / 2, p_Duration / 2).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
+                {
+                    LeanTween.move(p_Player, p_Player.transform.position + new Vector3(p_Direction.normalized.x, 0, 0) / 2 - Vector3.up / 2, p_Duration / 2).setEase(LeanTweenType.easeOutQuad);
+                });
+
+                p_CanMove = false;
+            }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Suelo"))
+        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
         {
-            p_PreviousPosition = transform.position;
+            p_CanMove = true;
         }
-
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            Debug.Log("choca");
-            //transform.position = p_PreviousPosition;
-            p_CanMove = false;
-            Invoke("CanMove", 1f);
-        }
-    }
-
-    private void CanMove()
-    {
-        p_CanMove = true;
     }
 }

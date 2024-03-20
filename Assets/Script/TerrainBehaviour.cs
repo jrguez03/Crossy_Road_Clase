@@ -6,13 +6,13 @@ public class TerrainBehaviour : MonoBehaviour
 {
     public Swipe_Controller t_SwipeController;
     public Input_Terrain t_InputTerrain;
+    public PlayerBehaviour t_PlayerBehaviour;
 
     public float t_Offset = 100f;
     public float t_Duration = 0.25f;
 
     [SerializeField] GameObject t_Terrain;
-
-    private bool m_IsRecycled = false;
+    [SerializeField] GameObject t_Player;
 
     public void Awake()
     {
@@ -29,33 +29,36 @@ public class TerrainBehaviour : MonoBehaviour
         t_SwipeController.OnSeMueve -= MoveTarget;
     }
 
-    void MoveTarget(Vector3 m_Direction)
+    public void MoveTarget(Vector3 t_Direction)
     {
-        LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -m_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad);
-    }
+        RaycastHit t_HitInfo = PlayerBehaviour.p_LastRay;
 
-    public void OnBecameInvisible()
-    {
-        if (!m_IsRecycled)
+        if (t_PlayerBehaviour.p_CanMove)
         {
-            t_InputTerrain.RecycleTerrain(t_Terrain);
-            m_IsRecycled = true;
+            if (Physics.Raycast(t_Player.transform.position + new Vector3(0, 1f, 0), t_Direction, out t_HitInfo, 1f))
+            {
+                Debug.Log("Hit Something, Restricting Movement");
+
+                if (t_Direction.z != 0)
+                {
+                    t_Direction.z = 0;
+                }
+
+                Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * t_HitInfo.distance, Color.red);
+            }
+
+            if (t_Direction != Vector3.zero)
+            {
+                LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad);
+            }
         }
     }
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Entro");
-            t_InputTerrain.NewLevelZone();
-        }
 
-    }
-    public void OnTriggerExit(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            t_PlayerBehaviour.p_CanMove = true;
         }
     }
 }
