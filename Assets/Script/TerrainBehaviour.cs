@@ -38,11 +38,13 @@ public class TerrainBehaviour : MonoBehaviour
             if (Physics.Raycast(t_Player.transform.position + new Vector3(0, 1f, 0), t_Direction, out t_HitInfo, 1f))
             {
                 Debug.Log("Hit Something, Restricting Movement");
-
-                if (t_Direction.z != 0)
+                if (t_HitInfo.collider.tag != "ProceduralTerrain")
                 {
-                    t_Direction.z = 0;
-                }
+                    if (t_Direction.z != 0)
+                    {
+                        t_Direction.z = 0;
+                    }
+                }              
 
                 Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * t_HitInfo.distance, Color.red);
             }
