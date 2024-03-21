@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
@@ -8,7 +10,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;
-    public GameObject p_Player;
+    [SerializeField] GameObject p_Player;
 
     public bool p_CanMove = true;
 

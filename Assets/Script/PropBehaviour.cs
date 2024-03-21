@@ -2,49 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PropBehaviour : MonoBehaviour
+public class NuevoPropsBehaviour : MonoBehaviour
 {
-    public Swipe_Controller pr_SwipeController;
-    public PlayerBehaviour pr_PlayerBehaviour;
-    public PropGenerator pr_PropsGenerator;
+    public Object_Pool m_NuevoPropsBehaviour;
+    public PlayerBehaviour m_PlayerBehaviour;
 
+    private bool m_PlayerMoved = false;
 
-
-    public void OnEnable()
+    void Start()
     {
-        pr_SwipeController.OnSeMueve += MoveTarget;
-    }
-
-    public void OnDisable()
-    {
-        pr_SwipeController.OnSeMueve -= MoveTarget;
-    }
-
-    void MoveTarget(Vector3 m_Direction)
-    {
-        RaycastHit pr_Hitinfo = PlayerBehaviour.p_LastRay;
-
-        if (pr_PlayerBehaviour.p_CanMove)
+        if (m_PlayerBehaviour == null)
         {
+            enabled = false;
+        }
+    }
 
-            if (Physics.Raycast(pr_PlayerBehaviour.transform.position + new Vector3(0, 1f, 0), m_Direction, out pr_Hitinfo, 1f))
-            {
-                Debug.Log("Hit Something, Restricting Movement");
+    void Update()
+    {
+        if (m_PlayerBehaviour.p_CanMove == false)
+        {
+            m_PlayerMoved = true;
+            RandomPrefab();
+        }
+        else if (m_PlayerBehaviour.p_CanMove)
+        {
+            m_PlayerMoved = false;
+        }
+    }
 
-                if (m_Direction.z != 0)
-                {
-                    m_Direction.z = 0;
-                }
-            }
 
-            if (pr_PlayerBehaviour.p_CanMove)
-            {
-                GameObject propObject = pr_PropsGenerator.GenerateProps();
-                if (propObject != null)
-                {
-                    LeanTween.move(propObject, propObject.transform.position + new Vector3(0, 0, -m_Direction.normalized.z), pr_PlayerBehaviour.p_Duration).setEase(LeanTweenType.easeOutQuad);
-                }
-            }
+    void RandomPrefab()
+    {
+        if (m_NuevoPropsBehaviour != null)
+        {
+            int m_RandomIndex = Random.Range(0, m_NuevoPropsBehaviour.m_PrefabsToPool.Length);
+            GameObject m_RandomPrefab = m_NuevoPropsBehaviour.m_PrefabsToPool[m_RandomIndex].m_Prefab;
+            GameObject m_RandomPrefabSpawn = m_NuevoPropsBehaviour.GetObject(m_RandomPrefab);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TerrainBehaviour : MonoBehaviour
@@ -13,10 +14,20 @@ public class TerrainBehaviour : MonoBehaviour
 
     [SerializeField] GameObject t_Terrain;
     [SerializeField] GameObject t_Player;
+    [SerializeField] TextMeshProUGUI t_StepsText;
+
+    private int t_Steps = 0;
 
     public void Awake()
     {
         t_Terrain = this.gameObject;
+    }
+
+    public void Start()
+    {
+        t_Steps = PlayerPrefs.GetInt("Score", 0);
+
+        UpdateStepText();
     }
 
     public void OnEnable()
@@ -51,7 +62,14 @@ public class TerrainBehaviour : MonoBehaviour
 
             if (t_Direction != Vector3.zero)
             {
-                LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad);
+                LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
+                {
+                    t_Steps += 1;
+
+                    PlayerPrefs.SetInt("Steps", t_Steps);
+
+                    UpdateStepText();
+                });
             }
         }
     }
@@ -62,5 +80,10 @@ public class TerrainBehaviour : MonoBehaviour
         {
             t_PlayerBehaviour.p_CanMove = true;
         }
+    }
+
+    private void UpdateStepText()
+    {
+        t_StepsText.text = "Score: " + t_Steps.ToString();
     }
 }
