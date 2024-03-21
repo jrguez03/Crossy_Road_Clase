@@ -17,6 +17,7 @@ public class TerrainBehaviour : MonoBehaviour
     [SerializeField] TextMeshProUGUI t_StepsText;
 
     private int t_Steps = 0;
+    private int t_Record = 0;
 
     public void Awake()
     {
@@ -26,6 +27,22 @@ public class TerrainBehaviour : MonoBehaviour
     public void Start()
     {
         t_Steps = PlayerPrefs.GetInt("Score", 0);
+        t_Record = PlayerPrefs.GetInt("Record", 0);
+
+        UpdateStepText();
+    }
+
+    public void Update()
+    {
+        PlayerPrefs.SetInt("Steps", t_Steps);
+        PlayerPrefs.Save();
+
+        if (t_Steps > t_Record)
+        {
+            t_Record = t_Steps;
+            PlayerPrefs.SetInt("Record", t_Record);
+            PlayerPrefs.Save();
+        }
 
         UpdateStepText();
     }
@@ -65,10 +82,6 @@ public class TerrainBehaviour : MonoBehaviour
                 LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
                 {
                     t_Steps += 1;
-
-                    PlayerPrefs.SetInt("Steps", t_Steps);
-
-                    UpdateStepText();
                 });
             }
         }
@@ -84,6 +97,6 @@ public class TerrainBehaviour : MonoBehaviour
 
     private void UpdateStepText()
     {
-        t_StepsText.text = "Score: " + t_Steps.ToString();
+        t_StepsText.text = "Score: " + t_Steps.ToString() + "/Record: " + t_Record.ToString();
     }
 }
