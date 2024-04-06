@@ -16,7 +16,7 @@ public class TerrainBehaviour : MonoBehaviour
     [SerializeField] GameObject t_Player;
     [SerializeField] TextMeshProUGUI t_StepsText;
 
-    private int t_Steps = 0;
+    public int t_Steps = 0;
     private int t_Record = 0;
 
     public void Awake()
@@ -59,6 +59,11 @@ public class TerrainBehaviour : MonoBehaviour
 
     public void MoveTarget(Vector3 t_Direction)
     {
+        if (Mathf.Abs(t_Direction.x) > Mathf.Abs(t_Direction.z))
+        {
+            return;
+        }
+
         RaycastHit t_HitInfo = PlayerBehaviour.p_LastRay;
 
         if (t_PlayerBehaviour.p_CanMove)
@@ -81,7 +86,10 @@ public class TerrainBehaviour : MonoBehaviour
             {
                 LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
                 {
-                    t_Steps += 1;
+                    if(t_Direction.z >= -3)
+                    {
+                        t_Steps += 1;
+                    }
                 });
             }
         }

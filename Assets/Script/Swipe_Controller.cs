@@ -6,16 +6,18 @@ public class Swipe_Controller : MonoBehaviour
 {
     Vector3 s_ClickInicial;
     Vector3 s_AlSoltarClick;
+    Vector3 s_Click;
 
     public float s_LimitMove = 100f;
 
     public static Swipe_Controller instance;
 
-    bool s_Salta;
-
     //declarar delegate y events para los movimientos
     public delegate void SeMueve(Vector3 diferencia);
     public event SeMueve OnSeMueve;
+
+    public delegate void Click();
+    public event Click OnClick;
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class Swipe_Controller : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             s_ClickInicial = Input.mousePosition;
+            s_Click = Vector3.forward;
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -62,6 +65,15 @@ public class Swipe_Controller : MonoBehaviour
                 if (OnSeMueve != null)
                 {
                     OnSeMueve(diferencia);
+                }
+            }
+            else
+            {
+                Vector3 click = s_Click;
+
+                if (OnSeMueve != null)
+                {
+                        OnSeMueve(click);
                 }
             }
         }

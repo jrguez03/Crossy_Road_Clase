@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 1765517490}
+  p_TerrainBehaviour: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
   p_Player: {fileID: 595329615}
@@ -455,6 +456,7 @@ MonoBehaviour:
   t_Terrain: {fileID: 668691260}
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 1856860865}
+  t_Steps: 0
 --- !u!1 &672390055
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +535,7 @@ MonoBehaviour:
   t_Terrain: {fileID: 702637808}
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
+  t_Steps: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +662,7 @@ MonoBehaviour:
   t_Terrain: {fileID: 743715232}
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
+  t_Steps: 0
 --- !u!1 &929706941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 0}
+  p_TerrainBehaviour: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
   p_Player: {fileID: 0}
@@ -2244,6 +2249,7 @@ MonoBehaviour:
   t_Terrain: {fileID: 1997907639}
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
+  t_Steps: 0
 --- !u!1 &2051081863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6937977994383651468, guid: cba73583540ff7442995e5af1dedad58,
@@ -2276,6 +2282,7 @@ MonoBehaviour:
   t_Terrain: {fileID: 2051081863}
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
+  t_Steps: 0
 --- !u!1001 &1601488316762972406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2384,7 +2391,7 @@ PrefabInstance:
     - target: {fileID: 510800868180695168, guid: fa2bb689193e3684b9321ba6c6653bff,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 563285980224311602, guid: fa2bb689193e3684b9321ba6c6653bff,
         type: 3}
@@ -2544,7 +2551,7 @@ PrefabInstance:
     - target: {fileID: 7718947946819489802, guid: fa2bb689193e3684b9321ba6c6653bff,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8178786147200224895, guid: fa2bb689193e3684b9321ba6c6653bff,
         type: 3}
@@ -2597,7 +2604,7 @@ PrefabInstance:
     - target: {fileID: 3029737006615212733, guid: eebfcc6b8104023488d686694d3c291e,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3029737006615212733, guid: eebfcc6b8104023488d686694d3c291e,
         type: 3}
@@ -2728,6 +2735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805425994223804087, guid: eebfcc6b8104023488d686694d3c291e,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 7805425994223804087, guid: eebfcc6b8104023488d686694d3c291e,
         type: 3}
@@ -3059,7 +3071,7 @@ PrefabInstance:
     - target: {fileID: 7678540157801756136, guid: 144287bc4ac6d484684a3fc7ff1aed55,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7781396783926846677, guid: 144287bc4ac6d484684a3fc7ff1aed55,
         type: 3}
@@ -3094,7 +3106,7 @@ PrefabInstance:
     - target: {fileID: 8434766771900804001, guid: 144287bc4ac6d484684a3fc7ff1aed55,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8770136826542003725, guid: 144287bc4ac6d484684a3fc7ff1aed55,
         type: 3}
@@ -3245,7 +3257,7 @@ PrefabInstance:
     - target: {fileID: 4519470130615195350, guid: daa58403fa289bc49af1065572a529b6,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4635061756725857391, guid: daa58403fa289bc49af1065572a529b6,
         type: 3}
@@ -3350,7 +3362,7 @@ PrefabInstance:
     - target: {fileID: 7924396611971790201, guid: daa58403fa289bc49af1065572a529b6,
         type: 3}
       propertyPath: m_Size.z
-      value: 1.1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8242918645016345326, guid: daa58403fa289bc49af1065572a529b6,
         type: 3}

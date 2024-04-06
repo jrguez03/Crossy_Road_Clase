@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     public Swipe_Controller p_SwipeController;
+    public TerrainBehaviour p_TerrainBehaviour;
 
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;
