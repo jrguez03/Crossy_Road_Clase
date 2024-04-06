@@ -9,6 +9,7 @@ TagManager:
   - Water
   - InitialTerrain
   - ProceduralTerrain
+  - Coin
   layers:
   - Default
   - TransparentFX

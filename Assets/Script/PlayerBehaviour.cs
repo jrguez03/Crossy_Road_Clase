@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     public Swipe_Controller p_SwipeController;
-    public TerrainBehaviour p_TerrainBehaviour;
+    public CoinBehaviour p_CoinBehaviour;
 
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;
@@ -86,6 +86,16 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
         {
             p_CanMove = true;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            p_CoinBehaviour.c_CoinCount += 1;
+
+            Destroy(other.gameObject);
         }
     }
 }

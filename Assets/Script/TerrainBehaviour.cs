@@ -59,11 +59,6 @@ public class TerrainBehaviour : MonoBehaviour
 
     public void MoveTarget(Vector3 t_Direction)
     {
-        if (Mathf.Abs(t_Direction.x) > Mathf.Abs(t_Direction.z))
-        {
-            return;
-        }
-
         RaycastHit t_HitInfo = PlayerBehaviour.p_LastRay;
 
         if (t_PlayerBehaviour.p_CanMove)
@@ -86,7 +81,7 @@ public class TerrainBehaviour : MonoBehaviour
             {
                 LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
                 {
-                    if(t_Direction.z >= -3)
+                    if(t_Direction.z >= -3 && Mathf.Abs(t_Direction.x) < Mathf.Abs(t_Direction.z))
                     {
                         t_Steps += 1;
                     }
