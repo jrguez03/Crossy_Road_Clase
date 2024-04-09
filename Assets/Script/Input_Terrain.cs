@@ -16,9 +16,4 @@ public class Input_Terrain : MonoBehaviour
         i_InitialTerrain[i_RandomTerrain].transform.position = i_InitialSpawn.transform.position;
         i_ProceduralTerrain[i_RandomTerrain].transform.position = i_ProceduralSpawn.transform.position;
     }
-
-    public void RecycleTerrain(GameObject i_Terrain)
-    {
-
-    }
 }
