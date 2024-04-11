@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
 {
     public Swipe_Controller p_SwipeController;
     public CoinBehaviour p_CoinBehaviour;
+    public Spawn_Props p_SpawnProps;
 
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;

@@ -10,6 +10,8 @@ TagManager:
   - InitialTerrain
   - ProceduralTerrain
   - Coin
+  - SpawnProps
+  - Prop
   layers:
   - Default
   - TransparentFX

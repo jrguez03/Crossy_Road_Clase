@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 562529454}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -717,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 562529452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8929844, y: 0.5940323, z: -5.3540373}
+  m_LocalPosition: {x: 1.8929844, y: 0.5940323, z: -5.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -735,10 +735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_PropsObjectPool: {fileID: 672390058}
+  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
-  pb_PropsSpawn: {fileID: 2091724257}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 562529452}
   pb_Duration: 0.25
@@ -757,7 +756,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -862,6 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 1765517490}
   p_CoinBehaviour: {fileID: 939896459}
+  p_SpawnProps: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
   p_Player: {fileID: 595329615}
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 623008363}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -918,7 +918,7 @@ Transform:
   m_GameObject: {fileID: 623008361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.78, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -936,10 +936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_PropsObjectPool: {fileID: 672390058}
+  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
-  pb_PropsSpawn: {fileID: 2091724257}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 623008361}
   pb_Duration: 0.25
@@ -958,7 +957,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1111,57 +1110,6 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 1856860865}
   t_Steps: 0
---- !u!1 &672390055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 672390057}
-  - component: {fileID: 672390058}
-  m_Layer: 0
-  m_Name: ObjectPoolProps
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &672390057
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672390055}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.927284, y: 2.690404, z: 9.940082}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &672390058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672390055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 600fcb120dbded645b95c2168a6990db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  o_PooledObjects: []
-  o_PropPrefabs:
-  - {fileID: 623008361}
-  - {fileID: 1994344340}
-  - {fileID: 1846135520}
-  - {fileID: 562529452}
-  o_CantidadObjects: 1
 --- !u!1 &702637808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6937977994383651468, guid: cba73583540ff7442995e5af1dedad58,
@@ -2748,6 +2696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 0}
   p_CoinBehaviour: {fileID: 0}
+  p_SpawnProps: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
   p_Player: {fileID: 0}
@@ -2794,6 +2743,7 @@ GameObject:
   - component: {fileID: 1358497518}
   - component: {fileID: 1358497517}
   - component: {fileID: 1358497516}
+  - component: {fileID: 1358497519}
   m_Layer: 0
   m_Name: Tigger Recycle
   m_TagString: Untagged
@@ -2864,6 +2814,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358497519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358497515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda61a7445ce9e84290601070084a02d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rp_SpawnProps: {fileID: 2091724260}
 --- !u!1 &1450902594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3271,7 @@ GameObject:
   - component: {fileID: 1846135522}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3322,7 +3285,7 @@ Transform:
   m_GameObject: {fileID: 1846135520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8929844, y: 0.5940323, z: -5.3540373}
+  m_LocalPosition: {x: 1.8929844, y: 0.5940323, z: -3.802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3340,10 +3303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_PropsObjectPool: {fileID: 672390058}
+  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
-  pb_PropsSpawn: {fileID: 2091724257}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 1846135520}
   pb_Duration: 0.25
@@ -3362,7 +3324,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3899,7 +3861,7 @@ GameObject:
   - component: {fileID: 1994344342}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3931,10 +3893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_PropsObjectPool: {fileID: 672390058}
+  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
-  pb_PropsSpawn: {fileID: 2091724257}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 1994344340}
   pb_Duration: 0.25
@@ -3953,7 +3914,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4084,9 +4045,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2091724258}
+  - component: {fileID: 2091724259}
+  - component: {fileID: 2091724260}
+  - component: {fileID: 2091724261}
+  - component: {fileID: 2091724262}
   m_Layer: 0
   m_Name: SpawnProps
-  m_TagString: Untagged
+  m_TagString: SpawnProps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4106,6 +4071,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2091724259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091724257}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 23.03, y: 3, z: 20}
+  m_Center: {x: 0, y: 1.5, z: 9}
+--- !u!114 &2091724260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600fcb120dbded645b95c2168a6990db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabsToSpawn:
+  - {fileID: 623008361}
+  - {fileID: 1994344340}
+  - {fileID: 1846135520}
+  - {fileID: 562529452}
+  spawnPoint: {fileID: 2091724258}
+  activeInstances: []
+--- !u!114 &2091724261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091724257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2356670815fe714f88b86ea10f3745b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gp_SpawnProps: {fileID: 2091724260}
+  m_Trigger: {fileID: 2091724259}
+--- !u!54 &2091724262
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091724257}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &16152987633144552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5376,7 +5422,6 @@ SceneRoots:
   - {fileID: 1939469057}
   - {fileID: 637171541}
   - {fileID: 1450902596}
-  - {fileID: 672390057}
   - {fileID: 278899199}
   - {fileID: 929706942}
   - {fileID: 1210583935}
