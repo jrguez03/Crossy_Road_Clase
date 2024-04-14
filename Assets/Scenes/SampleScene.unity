@@ -701,6 +701,7 @@ GameObject:
   - component: {fileID: 562529456}
   - component: {fileID: 562529455}
   - component: {fileID: 562529454}
+  - component: {fileID: 562529458}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Prop
@@ -735,12 +736,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 562529452}
   pb_Duration: 0.25
+  pb_Offset: 100
 --- !u!136 &562529455
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -814,6 +815,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562529452}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &562529458
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562529452}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &595329615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7c64b217dba27cf41a793d86af76b38e,
@@ -861,9 +889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 1765517490}
   p_CoinBehaviour: {fileID: 939896459}
-  p_SpawnProps: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
+  p_StepsBack: 0
   p_Player: {fileID: 595329615}
   p_CanMove: 1
 --- !u!136 &595329621
@@ -902,6 +930,7 @@ GameObject:
   - component: {fileID: 623008365}
   - component: {fileID: 623008364}
   - component: {fileID: 623008363}
+  - component: {fileID: 623008367}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Prop
@@ -936,12 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 623008361}
   pb_Duration: 0.25
+  pb_Offset: 100
 --- !u!65 &623008364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1013,6 +1042,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623008361}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &623008367
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623008361}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &637171540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1166,7 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 1856860865}
   t_Steps: 0
+  t_CanMove: 1
 --- !u!1 &702637808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6937977994383651468, guid: cba73583540ff7442995e5af1dedad58,
@@ -1143,6 +1200,7 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
   t_Steps: 0
+  t_CanMove: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,6 +1328,7 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
   t_Steps: 0
+  t_CanMove: 1
 --- !u!1 &928031203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,9 +2755,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p_SwipeController: {fileID: 0}
   p_CoinBehaviour: {fileID: 0}
-  p_SpawnProps: {fileID: 0}
   p_Offset: 100
   p_Duration: 0.25
+  p_StepsBack: 0
   p_Player: {fileID: 0}
   p_CanMove: 1
 --- !u!1 &1357878670
@@ -2795,7 +2854,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -3269,6 +3328,7 @@ GameObject:
   - component: {fileID: 1846135524}
   - component: {fileID: 1846135523}
   - component: {fileID: 1846135522}
+  - component: {fileID: 1846135526}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Prop
@@ -3303,12 +3363,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 1846135520}
   pb_Duration: 0.25
+  pb_Offset: 100
 --- !u!136 &1846135523
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3382,6 +3442,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846135520}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1846135526
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846135520}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1856860863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,6 +3946,7 @@ GameObject:
   - component: {fileID: 1994344344}
   - component: {fileID: 1994344343}
   - component: {fileID: 1994344342}
+  - component: {fileID: 1994344346}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Prop
@@ -3893,12 +3981,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18aa8bcce39639f47ae9d5fd8093eeff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pb_SpawnProps: {fileID: 2091724260}
   pb_PlayerBehaviour: {fileID: 595329620}
   pb_SwipeController: {fileID: 1765517490}
   pb_Player: {fileID: 595329615}
   pb_Prop: {fileID: 1994344340}
   pb_Duration: 0.25
+  pb_Offset: 100
 --- !u!135 &1994344343
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3970,6 +4058,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994344340}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1994344346
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994344340}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1997907639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6937977994383651468, guid: cba73583540ff7442995e5af1dedad58,
@@ -4003,6 +4118,7 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
   t_Steps: 0
+  t_CanMove: 1
 --- !u!1 &2051081863 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6937977994383651468, guid: cba73583540ff7442995e5af1dedad58,
@@ -4036,6 +4152,7 @@ MonoBehaviour:
   t_Player: {fileID: 595329615}
   t_StepsText: {fileID: 0}
   t_Steps: 0
+  t_CanMove: 1
 --- !u!1 &2091724257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,9 +4163,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2091724258}
   - component: {fileID: 2091724259}
-  - component: {fileID: 2091724260}
-  - component: {fileID: 2091724261}
   - component: {fileID: 2091724262}
+  - component: {fileID: 2091724260}
   m_Layer: 0
   m_Name: SpawnProps
   m_TagString: SpawnProps
@@ -4104,27 +4220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600fcb120dbded645b95c2168a6990db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabsToSpawn:
+  objectsList:
   - {fileID: 623008361}
   - {fileID: 1994344340}
   - {fileID: 1846135520}
   - {fileID: 562529452}
-  spawnPoint: {fileID: 2091724258}
-  activeInstances: []
---- !u!114 &2091724261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091724257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2356670815fe714f88b86ea10f3745b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gp_SpawnProps: {fileID: 2091724260}
-  m_Trigger: {fileID: 2091724259}
+  inactiveObjects: []
+  spawnPoint: {fileID: 2091724257}
 --- !u!54 &2091724262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4150,7 +4252,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1001 &16152987633144552
 PrefabInstance:

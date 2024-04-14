@@ -19,6 +19,8 @@ public class TerrainBehaviour : MonoBehaviour
     public int t_Steps = 0;
     private int t_Record = 0;
 
+    public bool t_CanMove = true;
+
     public void Awake()
     {
         t_Terrain = this.gameObject;
@@ -61,27 +63,29 @@ public class TerrainBehaviour : MonoBehaviour
     {
         RaycastHit t_HitInfo = PlayerBehaviour.p_LastRay;
 
-        if (t_PlayerBehaviour.p_CanMove)
+        Vector3 t_DirectionNormalized = t_Direction.normalized;
+
+        if (t_PlayerBehaviour.p_CanMove && t_CanMove)
         {
             if (Physics.Raycast(t_Player.transform.position + new Vector3(0, 1f, 0), t_Direction, out t_HitInfo, 1f))
             {
                 Debug.Log("Hit Something, Restricting Movement");
                 if (t_HitInfo.collider.tag != "ProceduralTerrain")
                 {
-                    if (t_Direction.z != 0)
+                    if (t_DirectionNormalized.z != 0)
                     {
-                        t_Direction.z = 0;
+                        t_DirectionNormalized.z = 0;
                     }
                 }              
 
                 Debug.DrawRay(transform.position + new Vector3(0, 1f, 0), transform.forward * t_HitInfo.distance, Color.red);
             }
 
-            if (t_Direction != Vector3.zero)
+            if (t_DirectionNormalized.z >= 0 && t_PlayerBehaviour.p_StepsBack == 0)
             {
-                LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_Direction.normalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
+                LeanTween.move(t_Terrain, t_Terrain.transform.position + new Vector3(0, 0, -t_DirectionNormalized.z), t_Duration).setEase(LeanTweenType.easeOutQuad).setOnComplete(() =>
                 {
-                    if(t_Direction.z >= -3 && Mathf.Abs(t_Direction.x) < Mathf.Abs(t_Direction.z))
+                    if(t_DirectionNormalized.z >= -3 && Mathf.Abs(t_DirectionNormalized.x) < Mathf.Abs(t_DirectionNormalized.z))
                     {
                         t_Steps += 1;
                     }
@@ -101,5 +105,13 @@ public class TerrainBehaviour : MonoBehaviour
     private void UpdateStepText()
     {
         t_StepsText.text = "Score: " + t_Steps.ToString() + "/Record: " + t_Record.ToString();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            t_CanMove = false;
+        }
     }
 }

@@ -16,9 +16,6 @@ public class Swipe_Controller : MonoBehaviour
     public delegate void SeMueve(Vector3 diferencia);
     public event SeMueve OnSeMueve;
 
-    public delegate void Click();
-    public event Click OnClick;
-
     private void Awake()
     {
         if (Swipe_Controller.instance != null)
