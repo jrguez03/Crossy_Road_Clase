@@ -604,6 +604,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5233895503555475403, guid: cba73583540ff7442995e5af1dedad58,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5610774576684941149, guid: cba73583540ff7442995e5af1dedad58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,11 +742,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pb_PlayerBehaviour: {fileID: 595329620}
-  pb_SwipeController: {fileID: 1765517490}
-  pb_Player: {fileID: 595329615}
-  pb_Prop: {fileID: 562529452}
-  pb_Duration: 0.25
+  pb_SwipeController: {fileID: 0}
+  pb_Player: {fileID: 0}
+  pb_Prop: {fileID: 0}
   pb_Offset: 100
+  pb_Duration: 0.25
+  pb_StepsBack: 0
 --- !u!136 &562529455
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -894,6 +900,7 @@ MonoBehaviour:
   p_StepsBack: 0
   p_Player: {fileID: 595329615}
   p_CanMove: 1
+  p_MoveLevel: 1
 --- !u!136 &595329621
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -966,11 +973,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pb_PlayerBehaviour: {fileID: 595329620}
-  pb_SwipeController: {fileID: 1765517490}
-  pb_Player: {fileID: 595329615}
-  pb_Prop: {fileID: 623008361}
-  pb_Duration: 0.25
+  pb_SwipeController: {fileID: 0}
+  pb_Player: {fileID: 0}
+  pb_Prop: {fileID: 0}
   pb_Offset: 100
+  pb_Duration: 0.25
+  pb_StepsBack: 0
 --- !u!65 &623008364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1531,6 +1539,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5233895503555475403, guid: cba73583540ff7442995e5af1dedad58,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5610774576684941149, guid: cba73583540ff7442995e5af1dedad58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1850,6 +1863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233895503555475403, guid: cba73583540ff7442995e5af1dedad58,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5610774576684941149, guid: cba73583540ff7442995e5af1dedad58,
         type: 3}
@@ -2760,6 +2778,7 @@ MonoBehaviour:
   p_StepsBack: 0
   p_Player: {fileID: 0}
   p_CanMove: 1
+  p_MoveLevel: 1
 --- !u!1 &1357878670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,11 +3383,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pb_PlayerBehaviour: {fileID: 595329620}
-  pb_SwipeController: {fileID: 1765517490}
-  pb_Player: {fileID: 595329615}
-  pb_Prop: {fileID: 1846135520}
-  pb_Duration: 0.25
+  pb_SwipeController: {fileID: 0}
+  pb_Player: {fileID: 0}
+  pb_Prop: {fileID: 0}
   pb_Offset: 100
+  pb_Duration: 0.25
+  pb_StepsBack: 0
 --- !u!136 &1846135523
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3982,11 +4002,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pb_PlayerBehaviour: {fileID: 595329620}
-  pb_SwipeController: {fileID: 1765517490}
-  pb_Player: {fileID: 595329615}
-  pb_Prop: {fileID: 1994344340}
-  pb_Duration: 0.25
+  pb_SwipeController: {fileID: 0}
+  pb_Player: {fileID: 0}
+  pb_Prop: {fileID: 0}
   pb_Offset: 100
+  pb_Duration: 0.25
+  pb_StepsBack: 0
 --- !u!135 &1994344343
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4344,6 +4365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5233895503555475403, guid: cba73583540ff7442995e5af1dedad58,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5610774576684941149, guid: cba73583540ff7442995e5af1dedad58,
         type: 3}

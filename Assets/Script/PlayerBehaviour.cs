@@ -17,6 +17,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] GameObject p_Player;
 
     public bool p_CanMove = true;
+    public bool p_MoveLevel = true;
 
     public static PlayerBehaviour p_Instance;
     public static RaycastHit p_LastRay;
@@ -118,6 +119,16 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
         {
             p_CanMove = true;
+            p_MoveLevel = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
+        {
+            p_CanMove = false;
+            p_MoveLevel = false;
         }
     }
 
