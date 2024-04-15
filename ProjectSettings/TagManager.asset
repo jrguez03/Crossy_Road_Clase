@@ -12,6 +12,7 @@ TagManager:
   - Coin
   - SpawnProps
   - Prop
+  - Die
   layers:
   - Default
   - TransparentFX

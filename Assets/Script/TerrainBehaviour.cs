@@ -9,7 +9,6 @@ public class TerrainBehaviour : MonoBehaviour
     public Input_Terrain t_InputTerrain;
     public PlayerBehaviour t_PlayerBehaviour;
 
-    public float t_Offset = 100f;
     public float t_Duration = 0.25f;
 
     [SerializeField] GameObject t_Terrain;

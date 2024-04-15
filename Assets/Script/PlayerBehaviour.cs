@@ -11,10 +11,12 @@ public class PlayerBehaviour : MonoBehaviour
     public Swipe_Controller p_SwipeController;
     public CoinBehaviour p_CoinBehaviour;
 
+    [SerializeField] GameObject p_Player;
+    [SerializeField] GameObject p_DieScreen;
+
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;
     public int p_StepsBack = 0;
-    [SerializeField] GameObject p_Player;
 
     public bool p_CanMove = true;
     public bool p_MoveLevel = true;
@@ -139,6 +141,12 @@ public class PlayerBehaviour : MonoBehaviour
             p_CoinBehaviour.c_CoinCount += 1;
 
             other.gameObject.SetActive(false);
+        }
+
+        if (other.gameObject.CompareTag("Die"))
+        {
+            p_Player.SetActive(false);
+            p_DieScreen.SetActive(true);
         }
     }
 }
