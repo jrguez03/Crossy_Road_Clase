@@ -5,6 +5,7 @@ using UnityEngine;
 public class Recycle_Prop_Pool : MonoBehaviour
 {
     public Spawn_Props rp_SpawnProps;
+    public CoinBehaviour rp_CoinBehaviour;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,7 @@ public class Recycle_Prop_Pool : MonoBehaviour
         {
             // Si el objeto que entra en el otro collider es un "prop", añadirlo a la lista de prefabs a spawnear
             rp_SpawnProps.inactiveObjects.Add(other.gameObject);
+
             other.gameObject.SetActive(false);
             other.gameObject.transform.parent = null;
         }

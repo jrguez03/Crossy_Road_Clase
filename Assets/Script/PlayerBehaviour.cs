@@ -118,7 +118,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
+        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain") || collision.gameObject.CompareTag("Log"))
         {
             p_CanMove = true;
             p_MoveLevel = true;
@@ -127,7 +127,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain"))
+        if (collision.gameObject.CompareTag("InitialTerrain") || collision.gameObject.CompareTag("ProceduralTerrain") || collision.gameObject.CompareTag("Log"))
         {
             p_CanMove = false;
             p_MoveLevel = false;
@@ -143,7 +143,7 @@ public class PlayerBehaviour : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        if (other.gameObject.CompareTag("Die"))
+        if (other.gameObject.CompareTag("Die") || other.gameObject.CompareTag("Water"))
         {
             p_Player.SetActive(false);
             p_DieScreen.SetActive(true);

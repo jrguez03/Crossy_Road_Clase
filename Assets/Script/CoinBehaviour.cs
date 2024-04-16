@@ -9,7 +9,6 @@ public class CoinBehaviour : MonoBehaviour
 
     public int c_CoinCount = 0;
 
-
     // Start is called before the first frame update
     void Start()
     {
