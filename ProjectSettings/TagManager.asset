@@ -14,6 +14,8 @@ TagManager:
   - Prop
   - Die
   - Log
+  - Medio
+  - Car
   layers:
   - Default
   - TransparentFX

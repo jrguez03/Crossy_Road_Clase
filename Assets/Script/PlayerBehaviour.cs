@@ -123,6 +123,12 @@ public class PlayerBehaviour : MonoBehaviour
             p_CanMove = true;
             p_MoveLevel = true;
         }
+
+        if (collision.gameObject.CompareTag("Car"))
+        {
+            p_Player.SetActive(false);
+            p_DieScreen.SetActive(true);
+        }
     }
 
     private void OnCollisionExit(Collision collision)
