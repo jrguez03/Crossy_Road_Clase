@@ -15,11 +15,11 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] GameObject p_DieScreen;
     [SerializeField] GameObject p_ScorePlayer;
     [SerializeField] GameObject p_CoinsPlayer;
-    [SerializeField] GameObject p_CanvasCoin;
+    [SerializeField] private CanvasGroup p_CanvasCoin;
+    [SerializeField] AudioSource p_CoinAudio;
 
     public float p_Offset = 100f;
     public float p_Duration = 0.25f;
-    public float p_fade = 100f;
     public float p_fadetime = 1f;
     public int p_StepsBack = 0;
 
@@ -131,8 +131,10 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Car"))
         {
-            p_Player.SetActive(false);
             p_DieScreen.SetActive(true);
+            p_ScorePlayer.SetActive(false);
+            p_CoinsPlayer.SetActive(false);
+            p_Player.SetActive(false);
         }
     }
 
@@ -143,13 +145,6 @@ public class PlayerBehaviour : MonoBehaviour
             p_CanMove = false;
             p_MoveLevel = false;
         }
-        if (collision.gameObject.CompareTag("Car"))
-        {
-            p_DieScreen.SetActive(true);
-            p_ScorePlayer.SetActive(false);
-            p_CoinsPlayer.SetActive(false);
-            p_Player.SetActive(false);
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -158,15 +153,21 @@ public class PlayerBehaviour : MonoBehaviour
         {
             p_CoinBehaviour.c_CoinCount += 1;
 
+            p_CoinAudio.Play();
+
             other.gameObject.SetActive(false);
 
-            LeanTween.alpha(p_CanvasCoin, p_fade, p_fadetime).setEase(LeanTweenType.easeInQuad).setOnComplete(() =>
+            LeanTween.cancel(p_CanvasCoin.gameObject);
+            LeanTween.alphaCanvas(p_CanvasCoin, 1f, p_fadetime).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() =>
             {
-                LeanTween.alpha(p_CanvasCoin, p_fade, p_fadetime).setEase(LeanTweenType.easeOutQuad);
+                LeanTween.alphaCanvas(p_CanvasCoin, 0f, p_fadetime).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() =>
+                {
+                    p_CanvasCoin.alpha = 0f;
+                });
             });
         }
 
-        if (other.gameObject.CompareTag("Die") || other.gameObject.CompareTag("Water"))
+        if (other.gameObject.CompareTag("Die") || other.gameObject.CompareTag("Water") || other.gameObject.CompareTag("Car"))
         {
             p_DieScreen.SetActive(true);
             p_ScorePlayer.SetActive(false);

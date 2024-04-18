@@ -12,6 +12,7 @@ public class CoinBehaviour : MonoBehaviour
     [SerializeField] GameObject c_Player;
 
     public int c_CoinCount = 0;
+    public float c_rotationspeed = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class CoinBehaviour : MonoBehaviour
 
         UpdateCoinText();
         MuereCoin();
+
+        transform.Rotate(Vector3.forward * c_rotationspeed * Time.deltaTime);
     }
 
     private void UpdateCoinText()
