@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class CoinBehaviour : MonoBehaviour
 {
+    public TerrainBehaviour c_TerrainBehaviour;
+
     [SerializeField] TextMeshProUGUI c_CoinText;
+    [SerializeField] TextMeshProUGUI c_FinalCoin;
+    [SerializeField] GameObject c_Player;
 
     public int c_CoinCount = 0;
 
@@ -24,10 +28,19 @@ public class CoinBehaviour : MonoBehaviour
         PlayerPrefs.Save();
 
         UpdateCoinText();
+        MuereCoin();
     }
 
     private void UpdateCoinText()
     {
         c_CoinText.text = "Coins: " + c_CoinCount.ToString();
+    }
+
+    public void MuereCoin()
+    {
+        if (c_Player)
+        {
+            c_FinalCoin.text = "Coins: " + c_CoinCount.ToString();
+        }
     }
 }

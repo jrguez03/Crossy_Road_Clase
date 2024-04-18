@@ -14,9 +14,13 @@ public class TerrainBehaviour : MonoBehaviour
     [SerializeField] GameObject t_Terrain;
     [SerializeField] GameObject t_Player;
     [SerializeField] TextMeshProUGUI t_StepsText;
+    [SerializeField] TextMeshProUGUI p_FinalScore;
+    [SerializeField] TextMeshProUGUI p_FinalRecord;
+    [SerializeField] GameObject p_NewRecord;
+    [SerializeField] GameObject p_Score;
 
     public int t_Steps = 0;
-    private int t_Record = 0;
+    public int t_Record = 0;
 
     public bool t_CanMove = true;
 
@@ -46,6 +50,7 @@ public class TerrainBehaviour : MonoBehaviour
         }
 
         UpdateStepText();
+        Muere();
     }
 
     public void OnEnable()
@@ -111,6 +116,24 @@ public class TerrainBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             t_CanMove = false;
+        }
+    }
+
+    public void Muere()
+    {
+        if (t_Player)
+        {
+            if (t_Steps < t_Record)
+            {
+                p_FinalScore.text = "Score: " + t_Steps.ToString();
+                p_FinalRecord.text = "Record: " + t_Record.ToString();
+            }
+            else if (t_Steps >= t_Record)
+            {
+                p_FinalScore.text = "Score: " + t_Steps.ToString();
+                p_FinalRecord.text = "New Record: " + t_Record.ToString();
+                p_NewRecord.SetActive(true);
+            }
         }
     }
 }
