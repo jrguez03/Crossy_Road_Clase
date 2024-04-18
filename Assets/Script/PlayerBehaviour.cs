@@ -15,7 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] GameObject p_DieScreen;
     [SerializeField] GameObject p_ScorePlayer;
     [SerializeField] GameObject p_CoinsPlayer;
-    [SerializeField] private CanvasGroup p_CanvasCoin;
+    [SerializeField] CanvasGroup p_CanvasCoin;
     [SerializeField] AudioSource p_CoinAudio;
 
     public float p_Offset = 100f;
