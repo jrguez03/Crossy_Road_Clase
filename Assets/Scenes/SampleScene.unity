@@ -990,6 +990,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -1328,6 +1338,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -1453,6 +1473,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -3160,6 +3190,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -3939,6 +3979,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -4899,6 +4949,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -5013,6 +5073,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -5156,6 +5226,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -5837,6 +5917,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -6493,6 +6583,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -6607,6 +6707,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -8048,6 +8158,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -8869,6 +8989,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -8973,6 +9103,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -9075,6 +9215,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -9267,6 +9417,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -9398,6 +9558,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -9733,6 +9903,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -11184,6 +11364,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -12291,6 +12481,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -13366,6 +13566,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -14571,6 +14781,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -15111,6 +15331,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -17134,6 +17364,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -17619,6 +17859,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -18931,6 +19181,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -19384,6 +19644,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -19685,6 +19955,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -20020,6 +20300,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -21424,6 +21714,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -21632,6 +21932,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -22297,6 +22607,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -22430,6 +22750,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
@@ -25155,6 +25485,16 @@ PrefabInstance:
       objectReference: {fileID: 1181357869}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
       propertyPath: c_TerrainBehaviour
       value: 
       objectReference: {fileID: 4838708177478389339}
@@ -27211,6 +27551,16 @@ PrefabInstance:
       propertyPath: c_FinalCoin
       value: 
       objectReference: {fileID: 1181357869}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CoinAudio
+      value: 
+      objectReference: {fileID: 8603735269705220625}
+    - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
+        type: 3}
+      propertyPath: p_CanvasCoin
+      value: 
+      objectReference: {fileID: 73049427}
     - target: {fileID: 6257997246874499597, guid: 849be269417df654db42fc33531895c4,
         type: 3}
       propertyPath: c_TerrainBehaviour
